@@ -1,19 +1,23 @@
 package P03;
 
 public class Test {
-	String str;
 	
-	Test(String str){
-		str = str;
+	String str;           	 //인스턴트 변수
+	
+	Test(String str){     	 //인스턴트메소드
+		str = str;			//지역변수
 	}
-	void print () {
+	void print () {			//
 		System.out.println(str);
 	}
 
 public static void main (String[]args) {
-	Test t = new Test("가나다abc123");
-	t.print();
-
+	
+	ObjectExam oe = new ObjectExam();
+	oe.inputNums();
+	GuGuDAn ggd = new GuGuDAn();
+	ggd.printLoop(oe);
+	
 	}
 }
 
