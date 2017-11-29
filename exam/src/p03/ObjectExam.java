@@ -1,4 +1,4 @@
-package P03;
+package p03;
 
 import java.util.Scanner;
 
@@ -8,7 +8,7 @@ public class ObjectExam {
 	int num1;
 	int num2;
 	
-	ObjectExam(){
+	public ObjectExam(){
 		System.out.println("기본 생성자를 호출하셨군요!");
 	}
 
@@ -23,7 +23,7 @@ public class ObjectExam {
 	}
 	
 	
-	void inputNums() {
+	public void inputNums() {
 		Scanner s = new Scanner (System.in);
 		System.out.println("첫번째 숫자를 입렵해주세요 :");
 		num1 = s.nextInt();
@@ -33,7 +33,7 @@ public class ObjectExam {
 		
 	}
 	
-	void printLoop() {
+	public void printLoop() {
 		for(int i=num1; i<=num2; i++) {
 			System.out.print(i+",");
 		

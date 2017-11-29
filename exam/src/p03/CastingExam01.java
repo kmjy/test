@@ -1,4 +1,4 @@
-package P03;
+package p03;
 
 public class CastingExam01 {
 public static void main (String[] args) {
