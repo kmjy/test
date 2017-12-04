@@ -21,8 +21,8 @@ public class Sam69game {
 			} else {
 				System.out.print(str + ",");
 			}
-			// if(i%10==0) {
-			// System.out.println();
+			 if(i%10==0) {
+			 System.out.println();
 		}
 	}
 
