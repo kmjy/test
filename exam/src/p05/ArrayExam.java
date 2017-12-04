@@ -3,60 +3,57 @@ package p05;
 import java.util.Scanner;
 
 public class ArrayExam {
-	
 	int num1;
 	int num2;
-	int[][]numArr;
+	int[][] numArr;
 	
 	void inputNums() {
-		Scanner s = new Scanner(System.in);                            
-		System.out.println("첫번째 숫자를 입렵해주세요 :");
-		num1 = s.nextInt();									
-		System.out.println("첫번째 숫자를 입렵해주세요 :");
-		num2 = s.nextInt();
+		Scanner scanner;
+		scanner = new Scanner(System.in);
+		System.out.println("1차원 배열변수의 갯수를 입력해주세요.");
+		num1 = scanner.nextInt();
+		System.out.println("2차원 배열변수의 갯수를 입력해주세요.");
+		num2 = scanner.nextInt();
 	}
- 
-		
-
+	
 	void initNumArr() {
-		
 		numArr = new int[num1][num2];
-		for(int i=0; i<numArr.length;i++) {
-			for(int j=0; j<numArr[i].length;j++) {
-				numArr[i][j] =(i*numArr[i].length)+j+1;
-		
-	}
-		
-		
+		int num = 0;
+		for(int i=0;i<numArr.length;i++) {
+			for(int j=0;j<numArr[i].length;j++) {
+				numArr[i][j] = ++num;
 			}
 		}
-
-//		System.out.println(numArr.length);                        //numArr의[][] 중 첫번재 [] 의 방개수.
-//		System.out.println(numArr[0].length);                     //numArr의[0]의 방개수
-
-		
-		void printNumArr() {
-			for(int i=0; i<numArr.length; i++) {
-				for(int j=0; j<numArr[i].length; j++) {
-					System.out.print(numArr[i][j]);
-				if(j != numArr[i].length-1) {
+	}
+	
+	void printNumArr() {
+		for(int i=0;i<numArr.length;i++) {
+			for(int j=0;j<numArr[i].length;j++) {
+				System.out.print(numArr[i][j]);
+				if(j!=numArr[i].length-1) {
 					System.out.print(",");
-				}else{
+				}else {
 					System.out.println();
-					
-					}
 				}
-			}	
+			}
 		}
-	
-	public static void main (String[]args) {
-		
-ArrayExam ae = new ArrayExam(); 					//ArrayExam(클래스 에서)의 함수  " ae" 를 생성하기
- 													//(클래스에서 함수를 생성해야 그클래스 안에 선언한것들을 불러올수있다)
-ae.inputNums();
-ae.initNumArr();
-ae.printNumArr();
+	}
 
-		}
+	public static void main(String[] args) {
+		//Scanner 클래스를 사용하여 콘솔창에서 배열변수의 각각의 방갯수를 입력받아 주세요.
+		//단 ArrayExam클래스의 num1과 num2라는 변수를 사용하셔야 합니다.
+		//ex => ae.num1 = scanner.nextInt();
+//		ArrayExam ae = new ArrayExam();
+//		ae.inputNums();
+//		System.out.println(ae.num1);
+//		System.out.println(ae.num2);
+//		ae.initNumArr();
+//		ae.printNumArr();
+		int a = 1;
+		a++;
+		System.out.println(a);
+		a = 1;
+		System.out.println(++a);
+		
+	}
 }
-	

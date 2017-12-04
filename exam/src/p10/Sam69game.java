@@ -1,6 +1,7 @@
-package p02;
+package p10;
 
-public class Sam69game_ex {
+public class Sam69game {
+
 	public static void main(String[] args) {
 
 		int[] num = new int[100];
@@ -11,18 +12,18 @@ public class Sam69game_ex {
 			str = str.replace("3", "짝");
 			str = str.replace("6", "짝");
 			str = str.replace("9", "짝");
-			
-			if (str.indexOf("짝")>-1) {
-				if(str.equals("짝짝")) {
+
+			if (str.indexOf("짝") > -1) {
+				if (str.equals("짝짝")) {
 					System.out.print("짝");
 				}
 				System.out.print("짝,");
-			}else {
-				System.out.print(str+",");
+			} else {
+				System.out.print(str + ",");
 			}
-//			if(i%10==0) {
-//				System.out.println();
-			}
+			// if(i%10==0) {
+			// System.out.println();
 		}
 	}
-//}
+
+}

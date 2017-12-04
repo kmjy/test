@@ -3,56 +3,38 @@ package p03;
 import java.util.Scanner;
 
 public class ObjectExam {
-	
-	
-	int num1;
-	int num2;
-	
+	public int num1;
+	public int num2;
 	public ObjectExam(){
-		System.out.println("기본 생성자를 호출하셨군요!");
+		System.out.println("ObjectExam 실행");
 	}
-
-	
-	void add(int num1, int num2) {
-		num1 =3;
-		System.out.println("둘의 합은 " + (num1 +num2));
+	void getInt() {
+		
 	}
-	
-	int getnum2(int num2) {
+	int add() {
+		return num1 + num2;
+	}
+	int getNum2(int num2) {
 		return num2;
 	}
-	
-	
 	public void inputNums() {
-		Scanner s = new Scanner (System.in);
-		System.out.println("첫번째 숫자를 입렵해주세요 :");
+		Scanner s = new Scanner(System.in);
+		System.out.println("첫번째 숫자를 입력해주세요 : " );
 		num1 = s.nextInt();
-		System.out.println("두번째  숫자를 입렵해주세요 :");
+		System.out.println("두번째 숫자를 입력해주세요 : " );
 		num2 = s.nextInt();
-		
-		
 	}
-	
-	public void printLoop() {
-		for(int i=num1; i<=num2; i++) {
+	void printLoop() {
+		for(int i=num1;i<num2;i++) {
 			System.out.print(i+",");
-		
-			if(i==(num2)){
-			System.out.print(num2);
-				
+			if(i%10==0) {
+				System.out.println("");
 			}
 		}
+		System.out.println(num2);
 	}
-	
-
-	
-	public static void main (String[]orgs) {
-		
-		ObjectExam o= new ObjectExam();
-		
-		o.inputNums();
-		o.printLoop();
-	
-		
+	public static void main(String[] args) {
+		ObjectExam o;
+		o = new ObjectExam();
 	}
 }
