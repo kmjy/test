@@ -16,7 +16,7 @@ public class ListExam3 {
 
 		int sum = 0;
 		for (Integer i : alInt) {
-			sum += 1;
+			sum += i;
 		}
 		System.out.println(sum);
 	}
