@@ -7,7 +7,7 @@ public class Lotto_Master {
 
 	int lottoCnt;
 	int joinCnt;
-
+//기본생성자로 해야 밑에 메소드 어디서든 쓸수있는거야
 	Lotto_Master() {
 		Scanner s = new Scanner(System.in);
 		System.out.println("참여인원을 입력해주세요=>");

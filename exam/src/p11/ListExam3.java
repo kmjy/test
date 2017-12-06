@@ -21,3 +21,4 @@ public class ListExam3 {
 		System.out.println(sum);
 	}
 }
+

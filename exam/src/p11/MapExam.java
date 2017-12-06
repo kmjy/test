@@ -14,3 +14,5 @@ public class MapExam {
 
 	}
 }
+
+HashMap<String,Integer> hm = new HashMap<String, Integer>
