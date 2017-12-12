@@ -12,7 +12,7 @@ public class Excute extends Father{
 		String prinStr = "";
 		for(int i = minNum; i<=maxNum; i++) {
 			String str= i +"";
-			for(String s : strs) {                    //포이치구문 다시 
+			for(String s : strs) {              
 				str = str.replace(s,"짝");
 				
 			}
