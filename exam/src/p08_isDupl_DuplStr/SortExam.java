@@ -10,7 +10,7 @@ public class SortExam {
 			for (int i = j + 1; i < nums.length; i++) {
 				if (nums[j] == nums[i]) {
 					cnt++;
-					duplStr = duplStr + nums[i] + ",";   //중복된 숫자 출력하려고
+					duplStr +=  nums[i] ;   		   //중복된 숫자 출력하려고
 					System.out.println("중복!!!!!");
 				}
 			}
