@@ -31,7 +31,7 @@ rollback;				# 다시 돌아가기
 commit; 					#  자동 저장이 아닐때 수동 저장 하는법
 
 alter table user_info									#기존 태이블에 컬럼 추가할때는 이렇게 한다. add로 하기 
-add column uiregdate datetime default now();   # now는 현재시간 구하는 마스퀠 함수.
+add column uiregdate datetime default now();  		  # now는 현재시간 구하는 마스퀠 함수.
 
 
 

@@ -123,7 +123,7 @@ where cino=4;
 
 
 /**/
-alter tavle user_info
+alter table user_info
 add Foreign key (cino)
 references class_info (cino);
 /**/
