@@ -98,7 +98,6 @@ and ciname = 'IOT';
 
 select * from user_info as ui,class_info as ci  
 where ui.cino = ci.cino 
-
 and userage >=30
 and cidesc like '%반%';   
 

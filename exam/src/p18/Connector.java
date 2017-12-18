@@ -18,6 +18,7 @@ public class Connector {
 	public Connection getConnection() throws SQLException {
 		if (con == null) {
 			con = DriverManager.getConnection(url, user, password);
+			con.setAutoCommit(false);
 		}
 		return con;
 	}
@@ -32,7 +33,6 @@ public class Connector {
 
 	public static void main(String[] args) {
 
-		Connection con = null;
 
 	}
 }

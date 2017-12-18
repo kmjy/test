@@ -10,7 +10,6 @@ import java.util.HashMap;
 
 public class UserList {
 
-	
 	public static void main(String[] args) {
 		Connector c = null;
 		try {
@@ -22,29 +21,28 @@ public class UserList {
 			ResultSetMetaData rsmd = rs.getMetaData();
 			String[] colNames = new String[rsmd.getColumnCount()];
 
+		
 			for (int i = 0; i < colNames.length; i++) {
 				colNames[i] = rsmd.getColumnLabel(i + 1);
-
 			}
 
 			ArrayList<HashMap<String, Object>> objList = new ArrayList<HashMap<String, Object>>();
-			while (rs.next()) {
 
+			while (rs.next()) {
 				HashMap<String, Object> hm = new HashMap<String, Object>();
 				for (String colName : colNames) {
 					hm.put(colName, rs.getString(colName));
 				}
 				objList.add(hm);
+				}
+				for (HashMap<String, Object> hm : objList) {
+					System.out.println(hm);
 			}
-			for (HashMap<String, Object> hm : objList) {
-				System.out.println(hm);
-			}
-
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
+		}
+		
+		catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			if (c != null) {

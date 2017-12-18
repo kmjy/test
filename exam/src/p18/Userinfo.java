@@ -1,9 +1,7 @@
 package p18;
 
 public class Userinfo {
-	
-	
-	
+
 private int uiNo;
 private String uiName;
 private int uiAge;
@@ -12,8 +10,6 @@ private String uiPwd;
 private int cino;
 private String uiRegDate;
 private String address;
-
-
 public int getUiNo() {
 	return uiNo;
 }
@@ -62,8 +58,6 @@ public String getAddress() {
 public void setAddress(String address) {
 	this.address = address;
 }
-
-
 @Override
 public String toString() {
 	return "Userinfo [uiNo=" + uiNo + ", uiName=" + uiName + ", uiAge=" + uiAge + ", uiId=" + uiId + ", uiPwd=" + uiPwd
@@ -71,3 +65,7 @@ public String toString() {
 }
 
 }
+
+
+
+//////////////////////////////////////////////
