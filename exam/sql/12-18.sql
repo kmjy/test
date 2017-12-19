@@ -6,6 +6,11 @@ grant all privileges on test2. *to `test`@`localhost`;  #권한 주는 방법
 #위에는 걍 외워야해 어쩔수없엉....
 
 
+create user `test`@`localhost` indendified by 'tset';
+
+creaet database test2;
+
+select sum(data_length+index_length) from information_schema.tables
 
 select table_schema,data_length,index_length from information_schema.tables			  
 where table_schema='iot2';
@@ -23,19 +28,19 @@ where variable_name ='autocommit';
 
 #요걸로도 autocommit 을 확인할수도있다.
 
-select @@version; 
+
 show variables
 where variable_name ='version';
-
 #버전도 이렇게 확인가능
 
 
 select @@general_log;
-show variables
-where variable_name ='version';
-set global general_log=1;
+set global general_log; =0;
+#제네럴 로그 설정
 
-#제네럴로그설정
+show variables
+where variable_name ='general_log';
+#제네럴로그 보는법
 
 select @@version,@@general_log;
 show variables
@@ -61,5 +66,10 @@ foreign key(user_num) references user_info(user_num));  #user_info 테이블의 
 
 ##################################
 
+net work type 
 
+tcp/ip
 
+포트넘버 3306
+
+select ci.* , (se)

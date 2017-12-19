@@ -126,6 +126,3 @@ where userage in((select min(userage) from user_info) , (select max(userage) fro
 ;
 
 
-
-
-	
